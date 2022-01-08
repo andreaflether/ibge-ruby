@@ -1,21 +1,21 @@
 describe IBGE::Regiao do
-  describe 'Regiao::obter_regioes' do
+  describe '.obter_regioes' do
     subject do
       VCR.use_cassette('regiao:obter_regioes') do
         IBGE::Regiao.obter_regioes
       end
     end
 
-    it 'deve retornar um Array não vazio' do
+    it 'deve retornar um Array<IBGE::Regiao>' do
       aggregate_failures do
         is_expected.to be_an Array
-        is_expected.not_to be_empty
+        expect(subject.first).to be_an IBGE::Regiao
       end
     end
   end
 
-  describe 'Regiao::regioes_por_identificador' do
-    shared_examples_for 'um array' do
+  describe '.regioes_por_identificador' do
+    shared_examples_for 'array' do
       it 'deve retornar um Array' do
         is_expected.to be_an Array
       end
@@ -36,7 +36,7 @@ describe IBGE::Regiao do
         end
       end
 
-      it_behaves_like 'um array'
+      it_has_behavior 'array'
     end
 
     context 'recebendo um array de IDs ([1, 2]) como parâmetro' do
@@ -46,10 +46,10 @@ describe IBGE::Regiao do
         end
       end
 
-      it_behaves_like 'um array'
+      it_has_behavior 'array'
     end
 
-    shared_examples_for 'um objeto' do
+    shared_examples_for 'objeto' do
       it 'deve retornar um objeto IBGE::Regiao' do
         is_expected.to be_an IBGE::Regiao
       end
@@ -74,7 +74,7 @@ describe IBGE::Regiao do
         end
       end
 
-      it_behaves_like 'um objeto'
+      it_has_behavior 'objeto'
     end
 
     context 'recebendo um ID (2) como parâmetro' do
@@ -84,7 +84,7 @@ describe IBGE::Regiao do
         end
       end
 
-      it_behaves_like 'um objeto'
+      it_has_behavior 'objeto'
     end
   end
 end

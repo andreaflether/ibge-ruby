@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/paises
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 08 Jan 2022 20:51:02 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Mon, 07 Feb 2022 20:29:56 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '1267'
+      Content-Length:
+      - '4257'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Sat, 08 Jan 2022 20:51:02 GMT
+recorded_with: VCR 3.0.3

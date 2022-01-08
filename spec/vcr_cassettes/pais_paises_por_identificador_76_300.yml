@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/paises/76%7C300
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 08 Jan 2022 20:51:04 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '472'
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Mon, 07 Feb 2022 20:51:04 GMT
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOnsiTTQ5Ijo3NiwiSVNPLUFMUEhBLTIiOiJCUiIsIklTTy1BTFBIQS0zIjoiQlJBIn0sIm5vbWUiOiJCcmFzaWwiLCJyZWdpYW8taW50ZXJtZWRpYXJpYSI6eyJpZCI6eyJNNDkiOjV9LCJub21lIjoiw4FtZXJpY2EgZG8gc3VsIn0sInN1Yi1yZWdpYW8iOnsiaWQiOnsiTTQ5Ijo0MTl9LCJub21lIjoiQW3DqXJpY2EgTGF0aW5hIGUgQ2FyaWJlIiwicmVnaWFvIjp7ImlkIjp7Ik00OSI6MTl9LCJub21lIjoiQW3DqXJpY2EifX19LHsiaWQiOnsiTTQ5IjozMDAsIklTTy1BTFBIQS0yIjoiR1IiLCJJU08tQUxQSEEtMyI6IkdSQyJ9LCJub21lIjoiR3LDqWNpYSIsInJlZ2lhby1pbnRlcm1lZGlhcmlhIjpudWxsLCJzdWItcmVnaWFvIjp7ImlkIjp7Ik00OSI6Mzl9LCJub21lIjoiRXVyb3BhIG1lcmlkaW9uYWwgIChTdWwgZGEgRXVyb3BhKSIsInJlZ2lhbyI6eyJpZCI6eyJNNDkiOjE1MH0sIm5vbWUiOiJFdXJvcGEifX19XQ==
+    http_version: 
+  recorded_at: Sat, 08 Jan 2022 20:51:03 GMT
+recorded_with: VCR 3.0.3

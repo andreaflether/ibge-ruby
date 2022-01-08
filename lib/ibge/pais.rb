@@ -47,11 +47,7 @@ module IBGE
     def self.tratar_retorno(resposta)
       paises = JSON.parse(resposta.body)
 
-      if paises.is_a?(Array) 
-        paises.map { |pais| Pais.new(pais) }
-      else
-        Pais.new(paises)
-      end 
+      paises.map { |pais| Pais.new(pais) }
     end
   end
 end

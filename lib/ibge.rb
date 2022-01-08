@@ -1,5 +1,6 @@
 require 'rest-client'
 require 'json'
+require 'ibge/utils'
 
 module IBGE
   BASE_URL = "https://servicodados.ibge.gov.br/api/v1/localidades"
@@ -12,10 +13,4 @@ module IBGE
   autoload :Regiao,       'ibge/regiao'
   autoload :Pais,         'ibge/pais'
   autoload :UF,           'ibge/uf'
-
-  private
-  
-  def formatar(parametro)
-    parametro.is_a?(Array) ? parametro.join('|') : parametro
-  end 
 end

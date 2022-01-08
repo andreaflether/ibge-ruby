@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/estados/<%= param %>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 08 Jan 2022 15:30:00 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '176'
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Mon, 07 Feb 2022 15:30:00 GMT
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fSx7ImlkIjoyOSwic2lnbGEiOiJCQSIsIm5vbWUiOiJCYWhpYSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fV0=
+    http_version: 
+  recorded_at: Sat, 08 Jan 2022 15:29:59 GMT
+recorded_with: VCR 3.0.3

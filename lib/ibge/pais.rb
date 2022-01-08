@@ -19,9 +19,8 @@ module IBGE
     #           paises.first.class #=> IBGE::Pais
     def self.obter_paises
       resposta = RestClient.get("#{BASE_URL}/paises")
-      paises   = JSON.parse(resposta.body)
-
-      paises.map { |pais| Pais.new(pais) }
+      
+      tratar_retorno(resposta)
     end
 
     # Obtém o conjunto de países a partir dos respectivos identificadores.
@@ -37,11 +36,22 @@ module IBGE
     #           paises = IBGE::Pais.paises_por_identificador([32, 76])
     #           paises.map(&:nome) #=> ["Argentina", "Brasil"]
     def self.paises_por_identificador(paises)
-      paises   = formatar(paises)
+      paises   = IBGE.formatar(paises)
       resposta = RestClient.get("#{BASE_URL}/paises/#{paises}")
-      paises   = JSON.parse(resposta.body)
+      
+      tratar_retorno(resposta)
+    end
 
-      paises.map { |pais| Pais.new(pais) }
+    private
+
+    def self.tratar_retorno(resposta)
+      paises = JSON.parse(resposta.body)
+
+      if paises.is_a?(Array) 
+        paises.map { |pais| Pais.new(pais) }
+      else
+        Pais.new(paises)
+      end 
     end
   end
 end

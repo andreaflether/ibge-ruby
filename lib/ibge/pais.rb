@@ -11,6 +11,8 @@ module IBGE
 
     # Obtém o conjunto de países.
     # 
+    # @return [Array<Pais>]
+    #
     # @example
     #           paises = IBGE::Pais.obter_paises
     #           paises.first.nome #=> "Afeganistão"
@@ -25,12 +27,13 @@ module IBGE
     # Obtém o conjunto de países a partir dos respectivos identificadores.
     # Pode ser informado o identificador (ID) ou um array de identificadores.
     #
-    # @param paises[String, Array]
+    # @param paises[Integer, String, Array]
     # @return [Array<Pais>]
     #
     # @example
     #           pais = IBGE::Pais.paises_por_identificador(76)
     #           pais.nome #=> "Brasil"
+    #
     #           paises = IBGE::Pais.paises_por_identificador([32, 76])
     #           paises.map(&:nome) #=> ["Argentina", "Brasil"]
     def self.paises_por_identificador(paises)

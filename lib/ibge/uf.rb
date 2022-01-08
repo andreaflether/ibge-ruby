@@ -63,11 +63,5 @@ module IBGE
       ufs = JSON.parse(resposta.body)
       ufs.map { |uf| UF.new(uf) }
     end
-
-    private
-
-    def formatar(parametro)
-      parametro.is_a?(Array) ? parametro.join('|') : parametro
-    end 
   end
 end

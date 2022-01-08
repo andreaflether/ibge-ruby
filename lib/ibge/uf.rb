@@ -1,6 +1,3 @@
-require 'rest-client'
-require 'json'
-
 module IBGE
   class UF
     attr_accessor :id, :nome, :sigla, :regiao
@@ -22,31 +19,28 @@ module IBGE
     def self.obter_ufs
       resposta = RestClient.get("#{BASE_URL}/estados")
 
-      ufs = JSON.parse(resposta.body)
-      ufs.map { |uf| UF.new(uf) }
+      tratar_retorno(resposta)
     end
 
     # Obtém o conjunto de Unidades da Federação do Brasil a partir dos respectivos identificadores.
-    # Pode ser informado a sigla, identificador (ID) ou um array de siglas/identificadores.
+    # Pode ser informada a sigla, identificador (ID) ou um array de siglas/identificadores.
     #
     # @param uf [String, Integer, Array]
     # @return [UF, Array<UF>]
     #
     # @example
     #           uf = IBGE::UF.uf_por_identificador('CE')
-    #           uf.class #=> IBGE::UF
-    #           uf = IBGE::UF.ufs_por_identificador(['BA', 'CE'])
-    #           uf.class #=> Array
-    def self.uf_por_identificador(uf)
-      uf       = formatar(uf)
+    #
+    #           ufs = IBGE::UF.ufs_por_identificador(['BA', 'CE'])
+    def self.ufs_por_identificador(uf)
+      uf       = IBGE.formatar(uf)
       resposta = RestClient.get("#{BASE_URL}/estados/#{uf}")
 
-      uf = JSON.parse(resposta.body)
-      UF.new(uf)
+      tratar_retorno(resposta)
     end
 
     # Obtém o conjunto de Unidades da Federação do Brasil a partir dos identificadores das regiões.
-    # Pode ser informado a sigla, identificador (ID) ou um array de siglas/identificadores.
+    # Pode ser informada a sigla, o identificador (ID) ou um array de siglas/identificadores.
     #
     # @param regiao [String, Integer, Array]
     # @return [Array<UF>]
@@ -54,14 +48,26 @@ module IBGE
     # @example
     #           ufs = IBGE::UF.ufs_por_regiao('NE')
     #           ufs.first.nome #=> "Maranhão"
+    #
     #           ufs = IBGE::UF.ufs_por_regiao(['NE', 'N'])
     #           ufs.map(&:nome) #=> ['Ceará', 'Amazonas'...]
     def self.ufs_por_regiao(regiao)
-      regiao   = formatar(regiao)
+      regiao   = IBGE.formatar(regiao)
       resposta = RestClient.get("#{BASE_URL}/regioes/#{regiao}/estados")
 
+      tratar_retorno(resposta)
+    end
+
+    private
+
+    def self.tratar_retorno(resposta)
       ufs = JSON.parse(resposta.body)
-      ufs.map { |uf| UF.new(uf) }
+
+      if ufs.is_a?(Array) 
+        ufs.map { |uf| UF.new(uf) }
+      else
+        UF.new(ufs)
+      end 
     end
   end
 end

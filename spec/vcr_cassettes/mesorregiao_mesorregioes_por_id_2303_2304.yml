@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes/2303%7C2304
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 02:07:41 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '275'
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Tue, 08 Feb 2022 02:07:41 GMT
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjIzMDMsIm5vbWUiOiJNZXRyb3BvbGl0YW5hIGRlIEZvcnRhbGV6YSIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19LHsiaWQiOjIzMDQsIm5vbWUiOiJTZXJ0w7VlcyBDZWFyZW5zZXMiLCJVRiI6eyJpZCI6MjMsInNpZ2xhIjoiQ0UiLCJub21lIjoiQ2VhcsOhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fV0=
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 02:07:40 GMT
+recorded_with: VCR 3.0.3

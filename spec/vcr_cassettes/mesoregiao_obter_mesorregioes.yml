@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 00:30:35 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Mon, 07 Feb 2022 23:28:03 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '3752'
+      Content-Length:
+      - '1808'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA82bzXLbNhCAX4WjszWxKck/uUmK5cZjxRrJzaGdHtYiKiNDEQpIdjrp5GHSHDo5+JT2CfhiBUhLWAK0W0ujhU/xRODuR2Cx2F0sf/6jxaPW66Ojw6ODViKWrPW6NYaIcQntixxWQhbfWgetH0et1+uRB62UL2JQA6fXrc1DU5FExd8JB/Vfki04iM0T5oF3Zvw7ITPW+vz588GGINz8eMXSjAVapEg4S1JGgxCiSXgPMQsiEVzmMi++1PWHRlx/aOT155Jtrzp0VD/I26/iDnrn8segv4RPInFnvYOUj5Hycjik2wOYN5/lkSiXnpyhs/lxyJJMCnqCLpqFmFp917GCSO8/CXwJdYAu2ntTvPfWY7fUH9Zen1Z7D739APjv69Uv5xNp7xlxk76RNwFZeogtdZs3H4OED8V3CqXG3sdMmftKxDyDBPTED1hcfFtSQHTxj1G58ZVEcK1+P+p7rt+hVH+M1RNrP3b3e2n0K/uoO0b+ZlLzN6tdtFu7nVD3CXrz6zmPlLeHkuBGzCHJeGLt+RMj9gbFGnj0lhxmDq4l94QRHjmGoJ1QcueYYYgEjpEZVsOLr8IhQMHKu/OWs9XrFGgyyq3gh8KJAvxgGL945XEyerU96oMhdIxzwiF3E4IQyZy8RS5SjS7udyMILZNo+wLpoOVYn1bkEDhIjbwwWPlKNRFDBtJlQLHyEEnVgxvOj2cxhJZdkgM8Eb+NFJHKID8BGQyyCiaz4h+WbiYkJYMw7uoSFjlIfku3Gse2k9Aek9wmTmoOm1g9ziCrI3wiMq4Xog6AMzgUmEy5CC7UkRGVkWgVpuxEY/ltFVz55TEbtr+QL2B+7BjDJw3Ov0sP8lWUuRC/hUTUgXAyNKglQ1Dc37oVgGdRGJsZCHkrJLPKD/vV3mAhHubA2MUYMtgg0E3EcZMxMJnA8jafO3OBcsQJErx5YKf4s5anao6Rsvk5T+ceiRqsxBeKbSqGA0g5zMnvxEJTNue/MkKakwbr7cewEM7ioIy+f2WEVoPdfP5ZDKFjJPQMxlCvvBCcNqyE+nfBVw7EqZE6Q1Kr0TudbKcNS+EBwl4LcoQztBjnv2fqZBVBFSUOgDscZ0bwANUUBnDXcLf3LArrkk079fbaqSuMIIJgrYWExyk4Vekk7aQ0lOFpAZ5w4DOIf4NISCoUO5MLdCpFOxv1NI5Qd+eoqbaiFmHM7auwDi77XRip5cjggqmg0XXenUfcS94AYhdY/FCY7XnJPuY848mdSO6AFqJb91kq4Rrn81xyWgqzR28kL/5MFnks9JIwLsWrfpxVGVuyDv8JyawtqzL9CosY4+RxJzZgaq5+EJJ/EknGaLFOHevRyfsbMSfmOLOqQ1429NEh9q2vNoV0PzDG2Q5hudLBRxq8V5GqsmJGjGLc7U9C2ywEOqWjZAibzp7zdFXcS56JdgpqUuxqZgedbeczI37zmAofkszN555DhZrSlEDtXaoD6QWgdRzH9wKg6m1M3oEar4tGcb7kbnNVB4mdXhqx2mEqD3EJ5WG3E4wd1vgjcTIPfyjGZHTzFUS2H94/Qf2q299MmFDGiiGqU7umhRCsVp/XdZRLkRbf1lQTyTILCJWHZ6hzZ1YV9lXkuBNMiN7wVr1aKZUaAtVhJRR/QZbbce9+9eNNk8ucUnUPv7qEjznYsfZ+9ZtdMlFR/pzPgXbqTaSv4zY3btyvdhPQK5tPywY2psw/L/+gBDER/RhkcR9zykVAkXw/TTnlCqC4/W0GK5bxhCcL0pfHLcNz3aZWOy20fJ7a4ft+iYw7XKeZ67tALzjodvshatcHuw+Sp2qbWAMNULexxFdVbpyAp4syvgnqti+HN3SLoGaBGYaI6wB2R11g2nBpQTp4JsomrodGEVKKrkUx4aKM14gxes6qrJuSaTnM4X7twTZx7T3ysTlOrWVoV36LEuHM9h+0+tHJ7njMYS55xq1oby8YodPONoQMZENa2EU1jBn6KE9XLmD9lHst8z8pnEZTLxSo95hJafd37Fe3e/2hoq4PUHYRUzEY5/jQ9TaKheTKur5r60wJSfBHQ7EXa2isqE25aC/KqXFQcHECSa23EGodW9LUdkjkm8Ypq5ngxiNV16FaH+4eoZ6IjCfK1+m+KbaQxFC1j/K823YtHPEK0ztE236i3UgCPA2qL4MyzSTS1GHqHaI7IyRbP6Kg1CPiMSiUBA3RB28PUdG1ldcoPCetMI0DTdr8QNqNWC+Lrusa/0sCbPpW8XHTw9eVN41Yu/M0nD2+kRo+E/ONZJ8+7f/yGhRQPce1+iVqvP++EE7zVw+FdhdIrhpafHEv4J9NYSccHhCcGMoDg/15jAeE+qUkOQCO89/wNCuv40csYhKsAwAFHm9Grace2grol38BMaWUSqRIAAA=
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 00:30:35 GMT
+recorded_with: VCR 3.0.3

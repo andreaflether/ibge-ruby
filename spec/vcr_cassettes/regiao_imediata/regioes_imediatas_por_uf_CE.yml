@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/estados/<%= param %>/regioes-imediatas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 23:39:53 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Tue, 08 Feb 2022 23:39:54 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA9WWv07DMBDGXyXynErpX6BbG1FUhCpBy4QYrskpOtTYkWNLqIiHQQyImY3VL4bFYAe10LKkaYYM0fedf46/5O7uiVHKhp1uFEXtkHGRIxuyiZAKVrgGFjKJGYFoEVcoc0wJJAEbOtt20+3ES0JWUrayHhafM6eOEaR5cfWd3KtnFfVMyBRLhezZXmGFueMkUwUFFSJpPnPXSW4wRW7ezKtojRKQUGDj4Xu+IHDiqXlvPHL/R0YgOwLkgZNca3qEtFLyV+TONk9txCc+1LosoQxawRXlAkmKIBWB9ak9wn3YPZw6yUhCAoqaDnzmk51pUHo3b3fTURdtO/JrJ+aj2az++7/UsP5nint/mmvbg8/mWOKDCObAlTgaen/6sQSF5rPcjd7f5qmN2L+4Beh9/tiHxfWrz8VSwmo372DTURttZW07LgVj5JZPCdtmpoW29wtt56eEYAkurfbpgoBne53FIffme+f3FGg+m43r22QMuUgobx7u/Rckwmjz2AwAAA==
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 23:39:52 GMT
+recorded_with: VCR 3.0.3

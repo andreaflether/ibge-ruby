@@ -55,7 +55,7 @@ describe IBGE::UF do
       it_has_behavior 'array', 2
     end
 
-    context 'recebendo um array de IDs ([1, 2]) como parâmetro' do
+    context 'recebendo um array de IDs ([29, 23]) como parâmetro' do
       subject do
         VCR.use_cassette('uf:ufs_por_identificador:BA|CE', erb: { param: '29%7C23' }) do
           IBGE::UF.ufs_por_identificador([29, 23])
@@ -87,6 +87,26 @@ describe IBGE::UF do
   end
 
   describe '.ufs_por_regiao' do
+    context 'recebendo um array de siglas (["N", "NE"]) como parâmetro' do
+      subject do
+        VCR.use_cassette('uf:ufs_por_regiao:N|NE', erb: { param: 'N%7CNE' }) do
+          IBGE::UF.ufs_por_regiao(%w(N NE))
+        end
+      end
+
+      it_has_behavior 'array', 16
+    end
+
+    context 'recebendo um array de IDs ([1, 2]) como parâmetro' do
+      subject do
+        VCR.use_cassette('uf:ufs_por_regiao:N|NE', erb: { param: '1%7C2' }) do
+          IBGE::UF.ufs_por_regiao([1, 2])
+        end
+      end
+
+      it_has_behavior 'array', 16
+    end
+
     context 'recebendo um ID (1) como parâmetro' do
       subject do
         VCR.use_cassette('uf:ufs_por_regiao:N', erb: { param: 1 }) do

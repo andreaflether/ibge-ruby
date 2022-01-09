@@ -26,7 +26,7 @@ describe IBGE::Mesorregiao do
     end
   end
 
-  describe '.obter_mesoregioes' do
+  describe '.obter_mesorregioes' do
     subject do
       VCR.use_cassette('mesorregiao/obter_mesorregioes') do
         IBGE::Mesorregiao.obter_mesorregioes

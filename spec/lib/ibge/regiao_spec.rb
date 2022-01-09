@@ -1,7 +1,7 @@
 describe IBGE::Regiao do
   describe '.obter_regioes' do
     subject do
-      VCR.use_cassette('regiao:obter_regioes') do
+      VCR.use_cassette('regiao/obter_regioes') do
         IBGE::Regiao.obter_regioes
       end
     end
@@ -31,7 +31,7 @@ describe IBGE::Regiao do
 
     context 'recebendo um array de siglas (["N", "NE"]) como parâmetro' do
       subject do
-        VCR.use_cassette('regiao:regioes_por_identificador:N|NE', erb: { param: 'N%7CNE' }) do
+        VCR.use_cassette('regiao/regioes_por_identificador:N|NE', erb: { param: 'N%7CNE' }) do
           IBGE::Regiao.regioes_por_identificador(%w(N NE))
         end
       end
@@ -41,7 +41,7 @@ describe IBGE::Regiao do
 
     context 'recebendo um array de IDs ([1, 2]) como parâmetro' do
       subject do
-        VCR.use_cassette('regiao:regioes_por_identificador:N|NE', erb: { param: '1%7C2' }) do
+        VCR.use_cassette('regiao/regioes_por_identificador:N|NE', erb: { param: '1%7C2' }) do
           IBGE::Regiao.regioes_por_identificador([1, 2])
         end
       end
@@ -69,7 +69,7 @@ describe IBGE::Regiao do
     
     context 'recebendo uma sigla (NE) como parâmetro' do
       subject do
-        VCR.use_cassette('regiao:regioes_por_identificador:NE', erb: { param: 'NE' }) do
+        VCR.use_cassette('regiao/regioes_por_identificador:NE', erb: { param: 'NE' }) do
           IBGE::Regiao.regioes_por_identificador('NE')
         end
       end
@@ -79,7 +79,7 @@ describe IBGE::Regiao do
 
     context 'recebendo um ID (2) como parâmetro' do
       subject do
-        VCR.use_cassette('regiao:regioes_por_identificador:NE', erb: { param: 2 }) do
+        VCR.use_cassette('regiao/regioes_por_identificador:NE', erb: { param: 2 }) do
           IBGE::Regiao.regioes_por_identificador(2)
         end
       end

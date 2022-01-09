@@ -28,7 +28,7 @@ describe IBGE::Pais do
 
   describe '.obter_paises' do
     subject do
-      VCR.use_cassette('pais:obter_paises') do
+      VCR.use_cassette('pais/obter_paises') do
         IBGE::Pais.obter_paises
       end
     end
@@ -39,7 +39,7 @@ describe IBGE::Pais do
   describe '.paises_por_identificador' do
     context 'recebendo um array de IDs ([76, 300]) como parâmetro' do
       subject do
-        VCR.use_cassette('pais:paises_por_identificador:76|300', erb: { param: '76%7C300' }) do
+        VCR.use_cassette('pais/paises_por_identificador:76|300', erb: { param: '76%7C300' }) do
           IBGE::Pais.paises_por_identificador([76, 300])
         end
       end
@@ -50,7 +50,7 @@ describe IBGE::Pais do
 
     context 'recebendo um ID (76) como parâmetro' do
       subject do
-        VCR.use_cassette('pais:paises_por_identificador:76', erb: { param: 76 }) do
+        VCR.use_cassette('pais/paises_por_identificador:76', erb: { param: 76 }) do
           IBGE::Pais.paises_por_identificador(76)
         end
       end

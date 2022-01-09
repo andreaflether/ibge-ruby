@@ -28,7 +28,7 @@ describe IBGE::Mesorregiao do
 
   describe '.obter_mesoregioes' do
     subject do
-      VCR.use_cassette('mesoregiao:obter_mesorregioes') do
+      VCR.use_cassette('mesorregiao/obter_mesorregioes') do
         IBGE::Mesorregiao.obter_mesorregioes
       end
     end
@@ -39,7 +39,7 @@ describe IBGE::Mesorregiao do
   describe '.mesorregioes_por_uf' do
     context 'recebendo um array de siglas (["BA", "CE"]) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_uf:BA|CE', erb: { param: 'BA%7CCE' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_uf:BA|CE', erb: { param: 'BA%7CCE' }) do
           IBGE::Mesorregiao.mesorregioes_por_uf(%w(BA CE))
         end
       end
@@ -49,7 +49,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo um array de IDs ([29, 23]) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_uf:BA|CE', erb: { param: '29%7C23' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_uf:BA|CE', erb: { param: '29%7C23' }) do
           IBGE::Mesorregiao.mesorregioes_por_uf([29, 23])
         end
       end
@@ -59,7 +59,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo uma sigla (CE) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_uf:CE', erb: { param: 'CE' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_uf:CE', erb: { param: 'CE' }) do
           IBGE::Mesorregiao.mesorregioes_por_uf('CE')
         end
       end
@@ -69,7 +69,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo um ID (23) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_uf:CE', erb: { param: 23 }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_uf:CE', erb: { param: 23 }) do
           IBGE::Mesorregiao.mesorregioes_por_uf(23)
         end
       end
@@ -81,7 +81,7 @@ describe IBGE::Mesorregiao do
   describe '.mesorregioes_por_regiao' do
     context 'recebendo um array de siglas (["N", "NE"]) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_regiao:N|NE', erb: { param: 'N%7CNE' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_regiao:N|NE', erb: { param: 'N%7CNE' }) do
           IBGE::Mesorregiao.mesorregioes_por_regiao(%w(N NE))
         end
       end
@@ -91,7 +91,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo um array de IDs ([1, 2]) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_regiao:N|NE', erb: { param: '1%7C2' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_regiao:N|NE', erb: { param: '1%7C2' }) do
           IBGE::Mesorregiao.mesorregioes_por_regiao([1, 2])
         end
       end
@@ -101,7 +101,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo um ID (2) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_regiao:NE', erb: { param: 2 }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_regiao:NE', erb: { param: 2 }) do
           IBGE::Mesorregiao.mesorregioes_por_regiao(2)
         end
       end
@@ -111,7 +111,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo uma sigla (NE) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_regiao:NE', erb: { param: 'NE' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_regiao:NE', erb: { param: 'NE' }) do
           IBGE::Mesorregiao.mesorregioes_por_regiao('NE')
         end
       end
@@ -123,7 +123,7 @@ describe IBGE::Mesorregiao do
   describe '.mesorregioes_por_id' do
     context 'recebendo um array de IDs ([2303, 2304]) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_id:2303|2304', erb: { param: '2303|2304' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_id:2303|2304', erb: { param: '2303|2304' }) do
           IBGE::Mesorregiao.mesorregioes_por_id([2303, 2304])
         end
       end
@@ -133,7 +133,7 @@ describe IBGE::Mesorregiao do
 
     context 'recebendo um ID (2303) como parâmetro' do
       subject do
-        VCR.use_cassette('mesorregiao:mesorregioes_por_id:2303', erb: { param: '2303' }) do
+        VCR.use_cassette('mesorregiao/mesorregioes_por_id:2303', erb: { param: '2303' }) do
           IBGE::Mesorregiao.mesorregioes_por_id(2303)
         end
       end

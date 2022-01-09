@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/estados/<%= param %>/microrregioes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 13:52:31 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Tue, 08 Feb 2022 13:52:32 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA9WYwYrbMBCGX0XonELibLbd3FLThS2bJSVsL6WHsT04WmzJjKVlSenDLD2UPEAvvfrFKm/BUpcox1jNLTAjfRp+zT/yl29cFHyZzKfT2YRLVSNf8luhFUHFCmQp1CoXNUO2yoGg+80nvMZWEWEpQPHlkO/S7xQpbLVNRiCULdqc+2sXOuGtKCuwkekHPmT1wd2z/f9qZRd950XbPYp+D/7d/ibuEMkQcZMJaCCDyIHnbj1FGH+BL4aINZJReez1XQwRW5VZUUeOe+n025jIWd+60oLUwD4ZobsDidgl8c7VWEMjmlMiTvzVxsG9GiLeg3hSLDUUVsb4vLPpEHFPJjOEGuqYCzxzqlx3h0LEX2GHkIIUsugOMdPOPf1qQ32PiBnXGVy6s01qL+ROxcy78MTQ5vCIYYuLgNb527VFgAr34dbghLNGTapRldAgoR9L/eRzoTu720AOD6b9X8Cd322RdPdDvQz2BPYinjjExb9Zv7Ad9NKeEf7qGLydNJ6Q7NMkE3XkB0imxw5wI3dQGxl79ZPZMfgtSigUsY2qGwwbZSRHcE3Pe9auyF5hLYLsrql+hNIAieyMTTLxHbOf+HyGGHm9N+HfASp24IUvTbKNWbENEgoKO/24wN6z0G6uw5fu0ttYWu95szXVCD6fOLP83D3THoGtKiwpLIhYwJ1Z3sIjQcsKYGuQJWRWHuFZJRZ8Z5fpDhooXrRtux2JJlx77yE/CvXceWRqSUlA9zMs8dFpZ157phMtY3TQ5FVZ4yX1HI/wQbH+g1Jshf36B90ErlcsFwAA
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 13:52:32 GMT
+recorded_with: VCR 3.0.3

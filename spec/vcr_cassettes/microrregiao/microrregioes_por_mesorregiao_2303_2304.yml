@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/mesorregioes/<%= param %>/microrregioes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 14:11:53 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1139'
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Tue, 08 Feb 2022 14:11:53 GMT
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjIzMDE2LCJub21lIjoiRm9ydGFsZXphIiwibWVzb3JyZWdpYW8iOnsiaWQiOjIzMDMsIm5vbWUiOiJNZXRyb3BvbGl0YW5hIGRlIEZvcnRhbGV6YSIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19fSx7ImlkIjoyMzAxNywibm9tZSI6IlBhY2FqdXMiLCJtZXNvcnJlZ2lhbyI6eyJpZCI6MjMwMywibm9tZSI6Ik1ldHJvcG9saXRhbmEgZGUgRm9ydGFsZXphIiwiVUYiOnsiaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX19LHsiaWQiOjIzMDE4LCJub21lIjoiU2VydMOjbyBkZSBDcmF0w6l1cyIsIm1lc29ycmVnaWFvIjp7ImlkIjoyMzA0LCJub21lIjoiU2VydMO1ZXMgQ2VhcmVuc2VzIiwiVUYiOnsiaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX19LHsiaWQiOjIzMDE5LCJub21lIjoiU2VydMOjbyBkZSBRdWl4ZXJhbW9iaW0iLCJtZXNvcnJlZ2lhbyI6eyJpZCI6MjMwNCwibm9tZSI6IlNlcnTDtWVzIENlYXJlbnNlcyIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19fSx7ImlkIjoyMzAyMCwibm9tZSI6IlNlcnTDo28gZGUgSW5oYW11bnMiLCJtZXNvcnJlZ2lhbyI6eyJpZCI6MjMwNCwibm9tZSI6IlNlcnTDtWVzIENlYXJlbnNlcyIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19fSx7ImlkIjoyMzAyMSwibm9tZSI6IlNlcnTDo28gZGUgU2VuYWRvciBQb21wZXUiLCJtZXNvcnJlZ2lhbyI6eyJpZCI6MjMwNCwibm9tZSI6IlNlcnTDtWVzIENlYXJlbnNlcyIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19fV0=
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 14:11:53 GMT
+recorded_with: VCR 3.0.3

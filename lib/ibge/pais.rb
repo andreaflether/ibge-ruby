@@ -26,7 +26,7 @@ module IBGE
     # Obtém o conjunto de países a partir dos respectivos identificadores.
     # Pode ser informado o identificador (ID) ou um array de identificadores.
     #
-    # @param paises[Integer, String, Array]
+    # @param paises [Integer, String, Array]
     # @return [Array<Pais>]
     #
     # @example

@@ -25,16 +25,16 @@ module IBGE
     # Obtém o conjunto de Unidades da Federação do Brasil a partir dos respectivos identificadores.
     # Pode ser informada a sigla, identificador (ID) ou um array de siglas/identificadores.
     #
-    # @param uf [String, Integer, Array]
+    # @param ufs [String, Integer, Array]
     # @return [UF, Array<UF>]
     #
     # @example
     #           uf = IBGE::UF.uf_por_identificador('CE')
     #
     #           ufs = IBGE::UF.ufs_por_identificador(['BA', 'CE'])
-    def self.ufs_por_identificador(uf)
-      uf       = IBGE.formatar(uf)
-      resposta = RestClient.get("#{BASE_URL}/estados/#{uf}")
+    def self.ufs_por_identificador(ufs)
+      ufs      = IBGE.formatar(ufs)
+      resposta = RestClient.get("#{BASE_URL}/estados/#{ufs}")
 
       tratar_retorno(resposta)
     end
@@ -42,7 +42,7 @@ module IBGE
     # Obtém o conjunto de Unidades da Federação do Brasil a partir dos identificadores das regiões.
     # Pode ser informada a sigla, o identificador (ID) ou um array de siglas/identificadores.
     #
-    # @param regiao [String, Integer, Array]
+    # @param regioes [String, Integer, Array]
     # @return [Array<UF>]
     #
     # @example
@@ -51,9 +51,9 @@ module IBGE
     #
     #           ufs = IBGE::UF.ufs_por_regiao(['NE', 'N'])
     #           ufs.map(&:nome) #=> ['Ceará', 'Amazonas'...]
-    def self.ufs_por_regiao(regiao)
-      regiao   = IBGE.formatar(regiao)
-      resposta = RestClient.get("#{BASE_URL}/regioes/#{regiao}/estados")
+    def self.ufs_por_regiao(regioes)
+      regioes  = IBGE.formatar(regioes)
+      resposta = RestClient.get("#{BASE_URL}/regioes/#{regioes}/estados")
 
       tratar_retorno(resposta)
     end

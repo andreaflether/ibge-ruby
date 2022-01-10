@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/estados/<%= param %>/regioes-intermediarias
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 10 Jan 2022 01:53:53 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2014'
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Wed, 09 Feb 2022 01:53:54 GMT
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjIzMDEsIm5vbWUiOiJGb3J0YWxlemEiLCJVRiI6eyJpZCI6MjMsInNpZ2xhIjoiQ0UiLCJub21lIjoiQ2VhcsOhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fSx7ImlkIjoyMzAyLCJub21lIjoiUXVpeGFkw6EiLCJVRiI6eyJpZCI6MjMsInNpZ2xhIjoiQ0UiLCJub21lIjoiQ2VhcsOhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fSx7ImlkIjoyMzAzLCJub21lIjoiSWd1YXR1IiwiVUYiOnsiaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjMwNCwibm9tZSI6Ikp1YXplaXJvIGRvIE5vcnRlIiwiVUYiOnsiaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjMwNSwibm9tZSI6IkNyYXRlw7pzIiwiVUYiOnsiaWQiOjIzLCJzaWdsYSI6IkNFIiwibm9tZSI6IkNlYXLDoSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjMwNiwibm9tZSI6IlNvYnJhbCIsIlVGIjp7ImlkIjoyMywic2lnbGEiOiJDRSIsIm5vbWUiOiJDZWFyw6EiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19LHsiaWQiOjI5MDEsIm5vbWUiOiJTYWx2YWRvciIsIlVGIjp7ImlkIjoyOSwic2lnbGEiOiJCQSIsIm5vbWUiOiJCYWhpYSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjkwMiwibm9tZSI6IlNhbnRvIEFudMO0bmlvIGRlIEplc3VzIiwiVUYiOnsiaWQiOjI5LCJzaWdsYSI6IkJBIiwibm9tZSI6IkJhaGlhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fSx7ImlkIjoyOTAzLCJub21lIjoiSWxow6l1cyDCvyBJdGFidW5hIiwiVUYiOnsiaWQiOjI5LCJzaWdsYSI6IkJBIiwibm9tZSI6IkJhaGlhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fSx7ImlkIjoyOTA0LCJub21lIjoiVml0w7NyaWEgZGEgQ29ucXVpc3RhIiwiVUYiOnsiaWQiOjI5LCJzaWdsYSI6IkJBIiwibm9tZSI6IkJhaGlhIiwicmVnaWFvIjp7ImlkIjoyLCJzaWdsYSI6Ik5FIiwibm9tZSI6Ik5vcmRlc3RlIn19fSx7ImlkIjoyOTA1LCJub21lIjoiR3VhbmFtYmkiLCJVRiI6eyJpZCI6MjksInNpZ2xhIjoiQkEiLCJub21lIjoiQmFoaWEiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19LHsiaWQiOjI5MDYsIm5vbWUiOiJCYXJyZWlyYXMiLCJVRiI6eyJpZCI6MjksInNpZ2xhIjoiQkEiLCJub21lIjoiQmFoaWEiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19LHsiaWQiOjI5MDcsIm5vbWUiOiJJcmVjw6oiLCJVRiI6eyJpZCI6MjksInNpZ2xhIjoiQkEiLCJub21lIjoiQmFoaWEiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19LHsiaWQiOjI5MDgsIm5vbWUiOiJKdWF6ZWlybyIsIlVGIjp7ImlkIjoyOSwic2lnbGEiOiJCQSIsIm5vbWUiOiJCYWhpYSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjkwOSwibm9tZSI6IlBhdWxvIEFmb25zbyIsIlVGIjp7ImlkIjoyOSwic2lnbGEiOiJCQSIsIm5vbWUiOiJCYWhpYSIsInJlZ2lhbyI6eyJpZCI6Miwic2lnbGEiOiJORSIsIm5vbWUiOiJOb3JkZXN0ZSJ9fX0seyJpZCI6MjkxMCwibm9tZSI6IkZlaXJhIGRlIFNhbnRhbmEiLCJVRiI6eyJpZCI6MjksInNpZ2xhIjoiQkEiLCJub21lIjoiQmFoaWEiLCJyZWdpYW8iOnsiaWQiOjIsInNpZ2xhIjoiTkUiLCJub21lIjoiTm9yZGVzdGUifX19XQ==
+    http_version: 
+  recorded_at: Mon, 10 Jan 2022 01:53:53 GMT
+recorded_with: VCR 3.0.3

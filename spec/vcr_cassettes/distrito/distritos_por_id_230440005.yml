@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/distritos/230440005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 17:19:47 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Tue, 08 Feb 2022 17:18:19 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '89'
+      Content-Length:
+      - '190'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7XPsQ6CMBCA4VchN2NSBB1YiWyyORmHC72QS6AlR100PIzP4ovZmADV4Gi3Xv4v7Z3vwBpy2KYqy5RSO4jB2I78qLTisKUb+lF3NVxzzxbyT/Aj51qsCDWMs/Ag2a/XNKzE6dweyYntbcsODUaaohCfysXEMHDToifFYflYQSjPh79/PbHUVVBXVjQNjmD0ZzIb7kgzOgz+p1Syus0kjCN5K+GQraO/bjGOlxd4VV/O5wEAAA==
+    http_version: 
+  recorded_at: Sun, 09 Jan 2022 17:19:47 GMT
+recorded_with: VCR 3.0.3

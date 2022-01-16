@@ -13,7 +13,7 @@ describe IBGE::Pais do
     end
 
     it 'deve retornar América do sul como região intermediária' do
-      expect(subject.first.regiao_intermediaria['nome']).to eq('Ámerica do sul')
+      expect(subject.first.regiao_intermediaria['nome']).to eq('América do sul')
     end
   end
 

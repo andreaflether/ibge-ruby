@@ -21,15 +21,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 08 Jan 2022 20:51:03 GMT
+      - Sat, 15 Jan 2022 21:27:44 GMT
       Server:
       - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json; charset=utf-8
       Cache-Control:
       - max-age=2592000
       Content-Encoding:
       - gzip
       Expires:
-      - Mon, 07 Feb 2022 20:50:04 GMT
+      - Mon, 14 Feb 2022 21:27:44 GMT
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Headers:
@@ -38,18 +40,14 @@ http_interactions:
       - GET
       Access-Control-Allow-Origin:
       - "*"
-      Age:
-      - '59'
-      Content-Length:
-      - '167'
       Connection:
       - close
-      Content-Type:
-      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA4uuVspMUbKqVvI1sVSyMjfTUfIM9td19AnwcNQ1UrJScgpSQhYyBgs5KtXqKOXl56aCeEWJxZk5QEVFqemZifm6mXklqUW5qSmZiUWZiSCDkYw3RWg73JibWpSZnKiQkq9QXJoDMrC4NEkXYgiaNhNDS4RGx9zDK8EafRJLMvMSFVIVnIE2JaXCXYCmGZtepdra2lgAVc2CEvoAAAA=
+        H4sIAAAAAAAAA4uuVspMUbKqVvI1sVSyMjfTUfIM9td19AnwcNQ1UrJScgpSQhYyBgs5KtXqKOXl56aCeEWJxZk5QEVFqemZifm6mXklqUW5qSmZiUWZiSCDkYw3RWhzzD28sigzOVEhJV+huDQHZGBxaZIuxBA0bSaGllg0+iSWZOYlKqQqOANtSkqFuwBNMza9SrW1tbEA5p8apfoAAAA=
     http_version: 
-  recorded_at: Sat, 08 Jan 2022 20:51:03 GMT
+  recorded_at: Sat, 15 Jan 2022 21:27:43 GMT
 recorded_with: VCR 3.0.3

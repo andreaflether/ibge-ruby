@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/municipios/2307254
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 22 Jan 2022 14:44:41 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Mon, 21 Feb 2022 14:44:41 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7XQSwrCMBAG4KuErBXqG9yJ6KJIN+IBxmSQEdOBaXelh/Eabnsxp4U2Vdwasknyf5NMKkvebu18kWzmq6Wd2JwD6kZKd3ZgPJoUhRyDTgE9D+SERfBGwHZbdVx1MhvoiUoWeLR2D4EdBYNm55Q3r7YAFj985BkLY1EqRhDMC1RzOcboxBZ0e4Am94f43jbcPHX9VTmms1Fa7/DtHbbW0ZspBfQEJXy0tRlQbKHP5yVKZ4TGaD2QM1/1J/7dQP0GcmJ1cMUBAAA=
+    http_version: 
+  recorded_at: Sat, 22 Jan 2022 14:44:41 GMT
+recorded_with: VCR 3.0.3

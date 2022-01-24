@@ -10,6 +10,7 @@ module IBGE
   autoload :Mesorregiao,         'ibge/mesorregiao'
   autoload :Microrregiao,        'ibge/microrregiao'
   autoload :Municipio,           'ibge/municipio'
+  autoload :Subdistrito,         'ibge/subdistrito'
   autoload :Regiao,              'ibge/regiao'
   autoload :RegiaoImediata,      'ibge/regiao_imediata'
   autoload :RegiaoIntermediaria, 'ibge/regiao_intermediaria'

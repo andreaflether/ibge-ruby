@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://servicodados.ibge.gov.br/api/v1/localidades/municipios/2304400/subdistritos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.5p157
+      Host:
+      - servicodados.ibge.gov.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jan 2022 23:52:08 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_qos/11.5
+      Cache-Control:
+      - max-age=2592000
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Tue, 22 Feb 2022 23:50:41 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '88'
+      Content-Length:
+      - '413'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+2WzUoDMRDHXyXkXCHbr9XebLEHoaUX8SAe0mYsU7ZJmWQvFR+mR+++wb6YqdLdoGuRgge72dvC/5ePmR9MHp45Kj5od0S3K4ToiX6La7MGPuDX2hVvGg0bwhaIJG9xhdYROsMHnxgvOV5iY0NOZrDd59e5xgVu8BvwQxwXZIhgibIkPJD069Nga8KdMjsBR2ZjMnRSS6aAhfDduGJa3OIykx4Z3VQHG4GkYuf/v2xRpadBempIgXXAX/x3YC5wDQqlk8H5hEhqb3MgtAP6oAhDrB7601vsL/LVjrSMDqVXginDyh2iHA2X4zJYWPvyRica70TSrqqbL3LCDUQrGm5FX5z2yOgH7a7BoiTnJUkiqoWNXuXa/eKtER1pkiM9cVUtjEr6mipj2TjXCzS62BEae0yWYNxMwFpY+cZES87OkiSpbXPUoslapKcNmDTo9sRolc9xHd04Pze6ZXRG8ATeBHZrbPHK7mXmD86C3kdVmqxKL6mqO5Mk9VLOj02XNJguYT5q8b+1eHwHF6We90oXAAA=
+    http_version: 
+  recorded_at: Sun, 23 Jan 2022 23:52:08 GMT
+recorded_with: VCR 3.0.3

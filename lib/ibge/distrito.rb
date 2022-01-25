@@ -98,7 +98,7 @@ module IBGE
     # Obtém o conjunto de distritos do Brasil a partir dos identificadores das regiões imediatas.
     # Pode ser informado um único ID ou um array de IDs.
     #
-    # @param ids [String, Integer, Array] Um ou mais identificadores de regiões imediatas.
+    # @param regioes [String, Integer, Array] Um ou mais identificadores de regiões imediatas.
     # @return [Array<Distrito>]
     #
     # @example
@@ -116,7 +116,7 @@ module IBGE
     # Obtém o conjunto de distritos do Brasil a partir dos identificadores das regiões intermediárias.
     # Pode ser informado um único ID ou um array de IDs.
     #
-    # @param ids [String, Integer, Array] Um ou mais identificadores de regiões intermediárias.
+    # @param regioes [String, Integer, Array] Um ou mais identificadores de regiões intermediárias.
     # @return [Array<Distrito>]
     #
     # @example
@@ -134,7 +134,7 @@ module IBGE
     # Obtém o conjunto de distritos do Brasil a partir dos identificadores das mesorregiões.
     # Pode ser informado um único ID ou um array de IDs.
     #
-    # @param ids [String, Integer, Array] Um ou mais identificadores de mesorregiões.
+    # @param mesorregioes [String, Integer, Array] Um ou mais identificadores de mesorregiões.
     # @return [Array<Distrito>]
     #
     # @example
@@ -152,7 +152,7 @@ module IBGE
     # Obtém o conjunto de distritos do Brasil a partir dos identificadores das microrregiões.
     # Pode ser informado um único ID ou um array de IDs.
     #
-    # @param ids [String, Integer, Array] Um ou mais identificadores de microrregiões.
+    # @param microrregioes [String, Integer, Array] Um ou mais identificadores de microrregiões.
     # @return [Array<Distrito>]
     #
     # @example

@@ -115,7 +115,7 @@ regioes = IBGE::Regiao.obter_regioes.sort_by(&:nome).map(&:nome) #=> ['Centro-Oe
 
 ## Utilização
 
-Abaixo estão alguns exemplos de utilização da gem. Verifique a [documentação](https://www.rubydoc.info/gems/ibge-ruby/main) para uma referência mais completa.
+Abaixo estão alguns exemplos de utilização da gem. Verifique a [documentação](https://www.rubydoc.info/gems/ibge-ruby/IBGE) para uma referência mais completa.
 
 ### Países
 
